@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- Nhung link CDN React.Js vao trang html -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+
+    <!-- Render code su dung React.Js -->
+    <script>
+        const element = React.createElement('h1', {className: 'title'}, 'Xin chao lop WEB 32');
+        ReactDOM.render(element, document.getElementById("root"));
+    </script>
+</body>
+
+</html>
