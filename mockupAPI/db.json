@@ -1,24 +1,14 @@
 {
-    "posts": [
-        {
-            "id": 1,
-            "title": "json-server",
-            "author": "typicode"
-        },
-        {
-            "id": 2,
-            "title": "web 32",
-            "author": "32 team"
-        }
-    ],
-    "comments": [
-        {
-            "id": 1,
-            "body": "some comment",
-            "postId": 1
-        }
-    ],
-    "profile": {
-        "name": "typicode"
+  "comments": [
+    {
+      "id": 1,
+      "title": "some comment",
+      "name": "Duc + Thanh + Sang + Dung"
+    },
+    {
+      "id": 3,
+      "title": "web32",
+      "name": "Thuc"
     }
+  ]
 }
