@@ -1,10 +1,7 @@
 
 const Home = () => {
   return (
-    <>
-      <h1>Trang chu</h1>
-    </>
-
+    <h1>Home</h1>
   )
 }
 
