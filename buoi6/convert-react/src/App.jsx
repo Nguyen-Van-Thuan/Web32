@@ -5,6 +5,7 @@ import Detail from "./pages/Detail"
 import Streams from "./pages/Streams"
 import Profile from "./pages/Profile"
 import Layout from "./components/Layout"
+import NotFound from "./pages/NotFound"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="details" element={<Detail />} />
           <Route path="streams" element={<Streams />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="*" element={<NotFound/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

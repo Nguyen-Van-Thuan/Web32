@@ -1,7 +1,7 @@
 
 const Streams = () => {
   return (
-    <div>Streams</div>
+    <h1>Streams</h1>
   )
 }
 

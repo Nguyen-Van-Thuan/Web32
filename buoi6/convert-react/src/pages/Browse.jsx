@@ -1,7 +1,7 @@
 
 const Browse = () => {
   return (
-    <div>Browse</div>
+    <h1>Browse</h1>
   )
 }
 
