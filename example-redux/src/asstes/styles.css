@@ -1,0 +1,12 @@
+.wrap-counter {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+.wrap-counter h1 {
+    margin: 30px;
+    text-transform: capitalize;
+}
+.wrap-counter button {
+    margin: 0 15px;
+}

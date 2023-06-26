@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import IMG_1 from '../../public/asstes/images/popular-01.jpg'
+import SliderHome from "../components/SliderHome"
 
 
 const Home = () => {
@@ -9,6 +10,9 @@ const Home = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="page-content">
+
+              <SliderHome />
+
 
               <div className="main-banner">
                 <div className="row">
