@@ -18,3 +18,5 @@ export default useStyles
 // Custom style cua 1 thanh phan trong ung dung thong qua hook: makeStyles.
 
 // buttonBlack, buttonViolet => className de su dung o cac thanh phan trong components.
+
+// Mui: The div => Box. Styles: sx = {{//noi dung muon styles}}

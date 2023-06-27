@@ -1,0 +1,22 @@
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+h1 {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+}
+button {
+    border: 1px solid #ddd;
+    padding: 15px 35px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 25px;
+}
+span {
+    font-size: 35px;
+    margin: 0 15px;
+}
