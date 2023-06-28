@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.wrap-header {
+    height: 100px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrap-header .logo {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.wrap-header ul {
+    display: flex;
+}
+.wrap-header ul li {
+    margin: 0 30px;
+    list-style: none;
+}
+
+.wrap-header ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+}
