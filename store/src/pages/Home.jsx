@@ -1,6 +1,12 @@
+import ListingProduct from "../components/ListingProduct"
+import SliderMain from "../components/SliderMain"
+
 const Home = () => {
   return (
-    <h1>Home</h1>
+    <>
+      <SliderMain/>
+      <ListingProduct/>
+    </>
   )
 }
 

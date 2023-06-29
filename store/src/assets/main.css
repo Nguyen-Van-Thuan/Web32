@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
 }
+
+/* Header./Start */
 .wrap-header {
     height: 100px;
     background-color: #000;
@@ -27,4 +29,27 @@
     color: #fff;
     text-transform: uppercase;
     font-size: 20px;
+}
+
+/* Slider./Start */
+.wrap-banner img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+}
+
+/* Listing Product */
+.wrap-listing .title {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.wrap-listing .card {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.wrap-listing .card img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
 }
