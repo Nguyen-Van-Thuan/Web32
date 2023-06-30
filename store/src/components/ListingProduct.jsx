@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
 import { Button, Card, Col, Container, Row } from "react-bootstrap"
+import { Link } from "react-router-dom";
 
 const ListingProduct = () => {
     const [data, setData] = useState([]);
@@ -9,7 +10,7 @@ const ListingProduct = () => {
         const getApi = async () => {
             const res = await axios({
                 method: "get", //lay ve
-                url: "https://fakestoreapi.com/products"
+                url: "http://localhost:3000/products"
             })
             return setData(res.data)
             // console.log(res.data, 'res');
@@ -17,13 +18,9 @@ const ListingProduct = () => {
         getApi();
 
     }, [])
-
-
     // console.log(data, 'data');
 
-
-
-    return (
+    return ( 
         <div className="wrap-listing">
             <Container>
                 <Row>
@@ -37,7 +34,12 @@ const ListingProduct = () => {
                         return (
                             <Col sx={12} sm={6} md={3} key={item.id}>
                                 <Card>
-                                    <Card.Img variant="top" src={item.image} />
+
+                                    <Link to={`products/${item.id}`}>
+                                        <Card.Img variant="top" src={item.image} />
+
+                                    </Link>
+
                                     <Card.Body>
                                         <Card.Title>{item.title}</Card.Title>
                                         <Card.Text>
