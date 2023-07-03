@@ -12,7 +12,7 @@ const Header = () => {
           </Link>
         </li>
         <li>
-          <Link to="#">
+          <Link to="login">
             Dang nhap
           </Link>
         </li>

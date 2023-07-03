@@ -3,6 +3,8 @@ import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import Layout from "./pages/Layout"
 import Detail from "./pages/Detail"
+import Login from "./pages/Login"
+import PrivateRouter from "./auth/PrivateRouter"
 
 function App() {
 
@@ -10,12 +12,14 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout/>}>
-
+          {/* Client */}
           <Route index element={<Home />} />
           <Route path="*" element={<NotFound />} />
-          
-          {/* Cong Thuc tao ra duong danh dong */}
           <Route path="products/:id" element={<Detail/>}/>
+          <Route path="login" element={<Login/>}/>
+          
+          {/* Admin */}
+          <Route path="dashboad" element={<PrivateRouter/>}/>
 
         </Route>
 
