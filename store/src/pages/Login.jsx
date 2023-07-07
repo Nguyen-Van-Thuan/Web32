@@ -1,9 +1,31 @@
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Controller, useForm } from 'react-hook-form';
 
 const Login = () => {
 
+  const urlLogin = `http://localhost:3000/login`
+
+  /* Get API Tu server ve */ 
+  const [user, setUser] = useState();
+
+  // Tao 1 Function getAPI ve
+  const getApi = async() => {
+    const res = await axios({
+      method: "get",
+      url: urlLogin
+    });
+    // console.log(res);
+    setUser(res.data[0]);
+  }
+  useEffect(()=> {
+    getApi();
+  },[]);
+
+  console.log(user, 'user');
+  // Form
   const { handleSubmit, control, formState: { errors } } = useForm({
     defaultValues: {
       email: "",
@@ -13,7 +35,12 @@ const Login = () => {
 
   // Ham xu ly xu kien nguoi dung gui form len
   const onSubmit = (data) => {
-    console.log(data, 'data');
+    // console.log(data, 'data');
+    if(data.email === user.user && data.password === user.pass) {
+      alert("Dang nhap thanh cong");
+    }else {
+      alert("Dang nhap that bai");
+    }
 
   }
 
