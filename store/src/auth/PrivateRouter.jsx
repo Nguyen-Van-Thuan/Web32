@@ -5,7 +5,7 @@ import { Navigate } from "react-router-dom";
 const PrivateRouter = () => {
   // Check xem da dang nhap hay chua
   const isAuth = localStorage.getItem("isLogin");
-  console.log(isAuth);
+  // console.log(isAuth);
 
   if (isAuth) {
     return <ProductsAdmin/>

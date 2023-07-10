@@ -63,3 +63,7 @@
     font-size: 36px;
     margin-bottom: 20px;
 }
+
+.offcanvas.offcanvas-start.show {
+    width: 80%;
+}
