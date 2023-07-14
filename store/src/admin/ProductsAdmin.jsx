@@ -5,7 +5,7 @@ import axios from "axios";
 const ProductsAdmin = () => {
   const [data, setData] = useState([]);
 
-  // call APi
+  // call APi goi ra product.
   const getApi = async () => {
     const res = await axios({
       method: "get", //lay ve

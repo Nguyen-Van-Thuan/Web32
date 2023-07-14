@@ -1,20 +1,61 @@
+import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Controller, useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
-const FormProduct = ({oldData}) => {
+const FormProduct = ({ oldData, setShow, getApi }) => {
 
-  console.log(oldData, 'oldData');
+  // console.log(oldData, 'oldData');
 
   const { handleSubmit, control, formState: { errors } } = useForm({
     defaultValues: {
-      title: oldData.title ?? ""
+      title: oldData.title ?? "" //A ? B : C
     }
   });
 
   const onSubmit = (data) => {
-    console.log(data, 'data');
+
+    if (data) {
+      axios({
+        method: 'patch',
+        url: `http://localhost:3000/products/${oldData.id}`,
+        data: {
+          title: data.title,
+        }
+      })
+        .then(() => {
+          getApi();
+          toast.success('Edit successfull!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+            
+        })
+        .catch((error)=>{
+          console.log(error);
+          toast.error('Edit false!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+            
+        })
+    }
+    setShow(false);
   }
+
   return (
     <>
       <Form onSubmit={handleSubmit(onSubmit)}>
@@ -24,11 +65,9 @@ const FormProduct = ({oldData}) => {
           <Controller
             control={control}
             name='title'
-            rules={
-              {
-                required: true,
-              }
-            }
+            rules={{
+              required: true,
+            }}
             render={({ field }) => (
               <Form.Control
                 {...field}
